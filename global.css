@@ -154,3 +154,62 @@ input[type="radio"]:checked + label:before {
     cursor: pointer; /* Adiciona cursor de pointer */
     margin-top: 20px; /* Espaço acima do botão */
 }
+
+
+/*bolhas de resposta*/
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre as bolhas */
+    margin-top: 50px; /* Ajuste de valor conforme necessário */
+}
+
+  /* Estilos para a primeira bolha (maior) */
+.bolha-grande-1 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(330deg, #A1A4F3 0%, rgba(255, 255, 255, 0.86) 99%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #6D6DFF;
+    text-align: center;
+}
+
+  /* Estilos para a bolha do meio (menor "ou") */
+.bolha-menor {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(330deg, #BBBCF2 0%, rgba(255, 255, 255, 0.86) 99%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #6D6DFF;
+    margin-top: -10px;
+    margin-left: -150px;
+}
+
+  /* Estilos para a terceira bolha (segunda maior) */
+.bolha-grande-2 {
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(330deg, #A1A4F3 0%, rgba(255, 255, 255, 0.86) 99%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6D6DFF;
+    text-align: center;
+    margin-top: -5px;
+}

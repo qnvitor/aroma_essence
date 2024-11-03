@@ -15,48 +15,48 @@ function calculatePoints() {
     const recommendations = {
         melhorarHumor: {
             citricaFlorais: score >= 20 
-                ? '<a href="saida_aroma_01.html">Laranja doce + Limão + Bergamota ou Lavanda + Ylang Ylang + Gerânio</a>' 
-                : '<a href="saida_aroma_02.html">Lavanda + Laranja doce + Jasmim + Rosa</a>',
+                ? 'Laranja doce + Limão + Bergamota ou Lavanda + Ylang Ylang + Gerânio</a>' 
+                : 'Lavanda + Laranja doce + Jasmim + Rosa</a>',
             herbaisAmadeiradas: score >= 20 
-                ? '<a href="saida_aroma_03.html">Alecrim + Eucalipto + Cedro + Manjerona</a>' 
-                : '<a href="saida_aroma_04.html">Sândalo + Cedro + Lavanda + Hortelã-pimenta</a>'
+                ? 'Alecrim + Eucalipto + Cedro + Manjerona</a>' 
+                : 'Sândalo + Cedro + Lavanda + Hortelã-pimenta</a>'
         },
         reduzirEstresse: {
             citricaFlorais: score >= 20 
-                ? '<a href="saida_aroma_05.html">Bergamota + Neroli + Ylang Ylang + Lavanda</a>' 
-                : '<a href="saida_aroma_06.html">Lavanda + Rosa + Laranja doce + Camomila</a>',
+                ? 'Bergamota + Neroli + Ylang Ylang + Lavanda</a>' 
+                : 'Lavanda + Rosa + Laranja doce + Camomila</a>',
             herbaisAmadeiradas: score >= 20 
-                ? '<a href="saida_aroma_07.html">Lavanda + Manjericão + Alecrim ou Cedro + Sândalo + Vetiver</a>' 
-                : '<a href="saida_aroma_08.html">Cedro + Sândalo + Patchouli + Lavanda</a>'
+                ? 'Lavanda + Manjericão + Alecrim ou Cedro + Sândalo + Vetiver</a>' 
+                : 'Cedro + Sândalo + Patchouli + Lavanda</a>'
         },
         aumentarEnergia: {
             citricaFlorais: score >= 20 
-                ? '<a href="saida_aroma_10.html">Alecrim + Hortelã-pimenta + Limão + Canela</a>' 
-                : '<a href="saida_aroma_09.html">Toranja + Limão Siciliano + Tangerina ou Hortelã-pimenta + Eucalipto + Alecrim</a>',
+                ? 'Alecrim + Hortelã-pimenta + Limão + Canela</a>' 
+                : 'Toranja + Limão Siciliano + Tangerina ou Hortelã-pimenta + Eucalipto + Alecrim</a>',
             herbaisAmadeiradas: score >= 20 
-                ? '<a href="saida_aroma_10.html">Alecrim + Hortelã-pimenta + Limão + Canela</a>' 
-                : '<a href="saida_aroma_09.html">Toranja + Limão Siciliano + Tangerina ou Hortelã-pimenta + Eucalipto + Alecrim</a>'
+                ? 'Alecrim + Hortelã-pimenta + Limão + Canela</a>' 
+                : 'Toranja + Limão Siciliano + Tangerina ou Hortelã-pimenta + Eucalipto + Alecrim</a>'
         },
         melhorarSono: {
             independente: score >= 20 
-                ? '<a href="saida_aroma_12.html">Lavanda + Camomila Romana + Neroli ou Cedro + Vetiver + Sândalo</a>'
-                : '<a href="saida_aroma_11.html">Lavanda + Camomila + Cedro + Sândalo</a>'
+                ? 'Lavanda + Camomila Romana + Neroli ou Cedro + Vetiver + Sândalo</a>'
+                : 'Lavanda + Camomila + Cedro + Sândalo</a>'
         },
         alivioDores: {
             citricaFlorais: score >= 20 
-                ? '<a href="saida_aroma_13.html">Eucalipto + Hortelã-pimenta + Gengibre ou Lavanda + Alecrim + Manjerona</a>' 
-                : '<a href="saida_aroma_13.html">Eucalipto + Hortelã-pimenta + Gengibre ou Lavanda + Alecrim + Manjerona</a>',
+                ? 'Eucalipto + Hortelã-pimenta + Gengibre ou Lavanda + Alecrim + Manjerona</a>' 
+                : 'Eucalipto + Hortelã-pimenta + Gengibre ou Lavanda + Alecrim + Manjerona</a>',
             herbaisAmadeiradas: score >= 20 
-                ? '<a href="saida_aroma_14.html">Alecrim + Eucalipto + Lavanda + Sândalo</a>' 
-                : '<a href="saida_aroma_14.html">Alecrim + Eucalipto + Lavanda + Sândalo</a>'
+                ? 'Alecrim + Eucalipto + Lavanda + Sândalo</a>' 
+                : 'Alecrim + Eucalipto + Lavanda + Sândalo</a>'
         },
         concentracaoFoco: {
             citricaFlorais: score >= 20 
-                ? '<a href="saida_aroma_15.html">Limão + Alecrim + Menta ou Hortelã-pimenta + Alecrim + Sálvia</a>' 
-                : '<a href="saida_aroma_16.html">Limão + Bergamota + Eucalipto + Alecrim</a>',
+                ? 'Limão + Alecrim + Menta ou Hortelã-pimenta + Alecrim + Sálvia</a>' 
+                : 'Limão + Bergamota + Eucalipto + Alecrim</a>',
             herbaisAmadeiradas: score >= 20 
-                ? '<a href="saida_aroma_17.html">Alecrim + Cedro + Vetiver + Hortelã-pimenta</a>' 
-                : '<a href="saida_aroma_18.html">Patchouli + Sândalo + Alecrim + Eucalipto</a>'
+                ? 'Alecrim + Cedro + Vetiver + Hortelã-pimenta</a>' 
+                : 'Patchouli + Sândalo + Alecrim + Eucalipto</a>'
         }
     };
   
@@ -85,18 +85,25 @@ function generateRecommendation() {
     } else if (preferences.includes("herbaisAmadeiradas")) {
         preferenceType = "herbaisAmadeiradas";
     } else {
-        preferenceType = "citricaFlorais";
+        preferenceType = "citricaFlorais"; // Default preference
     }
 
     const recommendation = getRecommendation(goal, score, preferenceType);
-    
-    // Redireciona para a página da recomendação
-    if (recommendation.includes('href="')) {
-        const urlMatch = recommendation.match(/href="([^"]+)"/);
-        if (urlMatch) {
-            window.location.href = urlMatch[1]; // Redireciona para a URL encontrada
-        }
-    } else {
-        alert("Nenhuma recomendação específica encontrada.");
-    }
+
+    // Armazena a recomendação no localStorage
+    localStorage.setItem("recommendation", recommendation);
+
+    // Redireciona para a página fixa de recomendação
+    window.location.href = 'saida_aromas_fixo.html';
 }
+
+// Recupera a recomendação armazenada no localStorage
+const recommendation = localStorage.getItem("recommendation");
+
+// Exibe a recomendação na div 'bolha-grande-1'
+if (recommendation) {
+    document.getElementById("recommendationContainer").innerHTML = recommendation;
+}
+
+// Limpa o localStorage para que a recomendação não persista em visitas futuras
+localStorage.removeItem("recommendation");
